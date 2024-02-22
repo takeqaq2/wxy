@@ -1,4 +1,5 @@
-FROM  kalilinux/kali-rolling onething1/wxedge
+FROM  kalilinux/kali-rolling
+FROM  onething1/wxedge
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get -y install wget
