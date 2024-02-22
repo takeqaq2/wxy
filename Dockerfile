@@ -10,7 +10,6 @@ CMD ["/bin/bash", "-c", "/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
 ARG PORT
 ARG CREDENTIAL
 EXPOSE $PORT
-RUN apk add --no-cache coreutils
 RUN echo $CREDENTIAL > /tmp/debug
 
 
