@@ -1,4 +1,3 @@
-FROM  kalilinux/kali-rolling
 FROM  onething1/wxedge
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -10,7 +9,7 @@ ARG PORT
 ARG CREDENTIAL
 EXPOSE $PORT
 RUN echo $CREDENTIAL > /tmp/debug
-CMD ["/bin/bash", "-c", "/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
+
 
 
 
