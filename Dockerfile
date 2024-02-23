@@ -10,8 +10,5 @@ ARG CREDENTIAL
 EXPOSE $PORT
 RUN echo $CREDENTIAL > /tmp/debug
 
-RUN cat /xyapp/tarapp/plugin_tunnel/logs/plugin_tunnel.log
-
-
 RUN ["/bin/sh", "-c", "/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
 
