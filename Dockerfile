@@ -10,5 +10,5 @@ ARG CREDENTIAL
 EXPOSE $PORT
 RUN echo $CREDENTIAL > /tmp/debug
 
-RUN ["/bin/sh", "-c", "/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
+CMD ["/bin/sh", "-c", "/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
 
